@@ -1,15 +1,29 @@
 package com.group4.steps;
 
+import com.group4.runners.BasicRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ManagerSteps {
 
     @Given("The Manager has logged in and is on the Messaging page")
     public void the_Manager_has_logged_in_and_is_on_the_Messaging_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String loginPagePath = "C:\\Users\\bosto\\Documents\\GitHub\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        // element that is on the messaging page that can be used in the explicit wait
+        String elementID = "sampleid";
+
+        BasicRunner.driver.get(loginPagePath);
+        BasicRunner.loginPage.email.sendKeys("manager@blissfulisland.com");
+        BasicRunner.loginPage.password.sendKeys("password");
+        BasicRunner.loginPage.loginButton.click();
+        WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
+        Assert.assertEquals(BasicRunner.driver.getTitle(), "Messaging");
     }
 
     @When("The Manager clicks on the Tenant Account Management button")

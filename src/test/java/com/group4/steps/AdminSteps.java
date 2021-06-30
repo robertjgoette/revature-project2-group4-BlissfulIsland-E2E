@@ -1,25 +1,40 @@
 package com.group4.steps;
 
+import com.group4.pages.LoginPage;
+import com.group4.runners.BasicRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.By;
 
 public class AdminSteps {
 
-    @Given("The admin has logged in and is on the admin portal")
-    public void the_admin_has_logged_in_and_is_on_the_admin_portal() {
+    @Given("The Admin has logged in and is on the admin portal")
+    public void the_Admin_has_logged_in_and_is_on_the_admin_portal() {
+        String loginPagePath = "C:\\Users\\bosto\\Documents\\GitHub\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        // element that is on the admin portal page that can be used in the explicit wait
+        String elementID = "sampleid";
+
+        BasicRunner.driver.get(loginPagePath);
+        BasicRunner.loginPage.email.sendKeys("admin@blissfulisland.com");
+        BasicRunner.loginPage.password.sendKeys("password");
+        BasicRunner.loginPage.loginButton.click();
+        WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
+        Assert.assertEquals(BasicRunner.driver.getTitle(), "Admin Portal");
+    }
+
+    @Then("The Admin sees the accounts table")
+    public void the_Admin_sees_the_accounts_table() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The admin sees the accounts table")
-    public void the_admin_sees_the_accounts_table() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @When("The admin clicks on a {string} button")
-    public void the_admin_clicks_on_a_button(String string) {
+    @When("The Admin clicks on the Make Manager button")
+    public void the_Admin_clicks_on_the_Make_Manager_button(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -36,32 +51,32 @@ public class AdminSteps {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The Admin gets a pop-up with the form for creating Manger accounts")
-    public void the_Admin_gets_a_pop_up_with_the_form_for_creating_Manger_accounts() {
+    @Then("The Admin gets a pop-up with the form for creating manager accounts")
+    public void the_Admin_gets_a_pop_up_with_the_form_for_creating_manager_accounts() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The Admin inputs theManger 's first and last name")
-    public void the_Admin_inputs_theManger_s_first_and_last_name() {
+    @Then("The Admin inputs the manager's first and last name")
+    public void the_Admin_inputs_the_manager_s_first_and_last_name() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The Admin inputs the Manger 's email address")
-    public void the_Admin_inputs_the_Manger_s_email_address() {
+    @Then("The Admin inputs the manager's email address")
+    public void the_Admin_inputs_the_manager_s_email_address() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The Admin inputs the Manger's unit number")
-    public void the_Admin_inputs_the_Manger_s_unit_number() {
+    @Then("The Admin inputs the manager's unit number")
+    public void the_Admin_inputs_the_manager_s_unit_number() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The Manager inputs a password for the tenant's account")
-    public void the_Manager_inputs_a_password_for_the_tenant_s_account() {
+    @Then("The Admin inputs a password for the manager's account")
+    public void the_Admin_inputs_a_password_for_the_manager_s_account() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -84,14 +99,20 @@ public class AdminSteps {
         throw new io.cucumber.java.PendingException();
     }
 
+    @When("The Admin clicks on the Promote to Manager button")
+    public void the_Admin_clicks_on_the_Promote_to_Manager_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
     @Then("A pop up asking for confirmation appears")
     public void a_pop_up_asking_for_confirmation_appears() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @When("The admin clicks the {string} button")
-    public void the_admin_clicks_the_button(String string) {
+    @When("The Admin clicks the Yes button")
+    public void the_Admin_clicks_the_Yes_button(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

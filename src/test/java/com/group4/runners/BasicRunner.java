@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features", glue = "dev.ranieri.steps")
+@CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
 public class BasicRunner {
 
     public static WebDriver driver = null;
