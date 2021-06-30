@@ -1,15 +1,29 @@
 package com.group4.steps;
 
+import com.group4.runners.BasicRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TenantSteps {
 
     @Given("The Tenant has logged in and is on the Messaging page")
     public void the_Tenant_has_logged_in_and_is_on_the_Messaging_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String loginPagePath = "";
+        // element that is on the messaging page that can be used in the explicit wait
+        String elementID = "sampleid";
+
+        BasicRunner.driver.get(loginPagePath);
+        BasicRunner.loginPage.email.sendKeys("tenant@gmail.com");
+        BasicRunner.loginPage.password.sendKeys("password");
+        BasicRunner.loginPage.loginButton.click();
+        WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
+        Assert.assertEquals(BasicRunner.driver.getTitle(), "Messaging");
     }
 
     @When("The Tenant clicks on the Conversations button")
