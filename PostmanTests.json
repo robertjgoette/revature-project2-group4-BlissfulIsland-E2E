@@ -25,6 +25,47 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tenant@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
 					"raw": "{\r\n    \"email\":\"erfvrtg\",\r\n    \"password\":\"csrvbrv\"\r\n}",
 					"options": {
 						"raw": {
@@ -88,6 +129,47 @@
 			"response": []
 		},
 		{
+			"name": "Create Account - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get Account By ID",
 			"event": [
 				{
@@ -106,7 +188,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts/50",
+					"raw": "http://localhost:7000/accounts/40",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -114,7 +196,40 @@
 					"port": "7000",
 					"path": [
 						"accounts",
-						"50"
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account By ID - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/accounts/99999999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"accounts",
+						"99999999"
 					]
 				}
 			},
@@ -288,7 +403,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts/92",
+					"raw": "http://localhost:7000/accounts/130",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -296,7 +411,49 @@
 					"port": "7000",
 					"path": [
 						"accounts",
-						"92"
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/accounts/99999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"accounts",
+						"99999"
 					]
 				}
 			},
@@ -323,6 +480,47 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"senderID\":\"84\",\r\n    \"receiverID\":\"85\",\r\n    \"messageBody\":\"Hi\",\r\n    \"timeSent\":\"7\",\r\n    \"messageType\":\"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -394,7 +592,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/messages/48",
+					"raw": "http://localhost:7000/messages/44",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -402,7 +600,40 @@
 					"port": "7000",
 					"path": [
 						"messages",
-						"48"
+						"44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Message By ID - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/messages/999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"messages",
+						"999"
 					]
 				}
 			},
@@ -468,6 +699,39 @@
 					"path": [
 						"units",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Unit by ID - Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/units/9999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"units",
+						"9999"
 					]
 				}
 			},

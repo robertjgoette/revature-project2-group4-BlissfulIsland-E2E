@@ -9,7 +9,7 @@ Feature: Admins can use the system
     Then The Admin inputs the manager's first and last name
     Then The Admin inputs the manager's email address
     Then The Admin inputs the manager's unit number
-    Then The Manager inputs a password for the tenant's account
+    Then The Admin inputs a password for the manager's account
     When The Admin clicks the Submit button
     Then The Admin gets a pop-up with a success message
     Then The Admin is taken back to the Tenant Account Management page
