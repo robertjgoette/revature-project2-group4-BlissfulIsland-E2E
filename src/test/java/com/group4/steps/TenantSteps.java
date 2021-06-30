@@ -13,7 +13,7 @@ public class TenantSteps {
 
     @Given("The Tenant has logged in and is on the Messaging page")
     public void the_Tenant_has_logged_in_and_is_on_the_Messaging_page() {
-        String loginPagePath = "C:\\Users\\bosto\\Documents\\GitHub\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        String loginPagePath = "";
         // element that is on the messaging page that can be used in the explicit wait
         String elementID = "sampleid";
 

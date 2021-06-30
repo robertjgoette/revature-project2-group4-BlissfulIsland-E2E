@@ -14,7 +14,7 @@ public class AdminSteps {
 
     @Given("The Admin has logged in and is on the admin portal")
     public void the_Admin_has_logged_in_and_is_on_the_admin_portal() {
-        String loginPagePath = "C:\\Users\\bosto\\Documents\\GitHub\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        String loginPagePath = "";
         // element that is on the admin portal page that can be used in the explicit wait
         String elementID = "sampleid";
 
