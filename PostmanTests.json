@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f63e92e1-e3f3-4ed7-93d5-8d953d1c6375",
+		"_postman_id": "e86ecfa5-5051-4584-8a17-2af85e00dc8e",
 		"name": "Project2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -33,10 +33,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/login",
+					"raw": "http://18.117.185.229:7000/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -74,10 +77,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/login",
+					"raw": "http://18.117.185.229:7000/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -115,10 +121,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts",
+					"raw": "http://18.117.185.229:7000/accounts",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -156,10 +165,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts",
+					"raw": "http://18.117.185.229:7000/accounts",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -188,10 +200,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts/40",
+					"raw": "http://18.117.185.229:7000/accounts/40",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -221,10 +236,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts/99999999",
+					"raw": "http://18.117.185.229:7000/accounts/99999999",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -254,10 +272,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts",
+					"raw": "http://18.117.185.229:7000/accounts",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -286,10 +307,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts/manager",
+					"raw": "http://18.117.185.229:7000/accounts/manager",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -319,10 +343,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/accounts/tenant",
+					"raw": "http://18.117.185.229:7000/accounts/tenant",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -361,10 +388,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts/15",
+					"raw": "http://18.117.185.229:7000/accounts/15",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -403,15 +433,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts/130",
+					"raw": "http://18.117.185.229:7000/accounts/107",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
 						"accounts",
-						"130"
+						"107"
 					]
 				}
 			},
@@ -424,8 +457,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -445,10 +478,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/accounts/99999",
+					"raw": "http://18.117.185.229:7000/accounts/99999",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -487,10 +523,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/messages",
+					"raw": "http://18.117.185.229:7000/messages",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -528,10 +567,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7000/messages",
+					"raw": "http://18.117.185.229:7000/messages",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -560,10 +602,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/messages",
+					"raw": "http://18.117.185.229:7000/messages",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -592,10 +637,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/messages/44",
+					"raw": "http://18.117.185.229:7000/messages/44",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -625,10 +673,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/messages/999",
+					"raw": "http://18.117.185.229:7000/messages/999",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -658,10 +709,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/units",
+					"raw": "http://18.117.185.229:7000/units",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -690,10 +744,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/units/1",
+					"raw": "http://18.117.185.229:7000/units/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -723,10 +780,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/units/9999",
+					"raw": "http://18.117.185.229:7000/units/9999",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -756,10 +816,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/types",
+					"raw": "http://18.117.185.229:7000/types",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
@@ -788,10 +851,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7000/typesAvailability",
+					"raw": "http://18.117.185.229:7000/typesAvailability",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"18",
+						"117",
+						"185",
+						"229"
 					],
 					"port": "7000",
 					"path": [
