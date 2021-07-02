@@ -19,7 +19,7 @@ public class BasicRunner {
     public static AccountMaker accountMaker = null;
     public static AdminPortal adminPortal = null;
     public static LoginPage loginPage = null;
-    public static Messaging messaging = null;
+    public static MessagingB messaging = null;
     public static UnitList unitList = null;
 
     @BeforeClass
@@ -30,7 +30,7 @@ public class BasicRunner {
         accountMaker = new AccountMaker(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
-        messaging = new Messaging(driver);
+        messaging = new MessagingB(driver);
         unitList = new UnitList(driver);
     }
 
