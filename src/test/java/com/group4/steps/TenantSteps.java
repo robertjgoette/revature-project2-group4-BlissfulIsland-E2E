@@ -28,7 +28,7 @@ public class TenantSteps {
         Assert.assertEquals(BasicRunner.driver.getTitle(), "Home Page");
     }
 
-    @Then("A table is shown on the page with a list of recent messages")
+    @When("A table is shown on the page with a list of recent messages")
     public void a_table_is_shown_on_the_page_with_a_list_of_recent_messages() {
         WebDriverWait wait = new WebDriverWait(BasicRunner.driver,1);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("recentMessageTable")));
