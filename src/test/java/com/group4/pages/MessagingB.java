@@ -29,6 +29,6 @@ public class MessagingB {
     @FindBy(id = "typeOfIssue")
     public WebElement typeSelect;
 
-    @FindBy(id = "messageSumit")
+    @FindBy(id = "messageSubmit")
     public WebElement messageSubmit;
 }
