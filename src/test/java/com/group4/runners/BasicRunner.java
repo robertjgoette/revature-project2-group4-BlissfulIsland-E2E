@@ -8,36 +8,35 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
+@CucumberOptions(features = "classpath:features/ManagerFeatures", glue = "com.group4.steps")
 public class BasicRunner {
-
     public static WebDriver driver = null;
-
-    public static AccountMaker accountMaker = null;
+    public static AccountMakerCarlos accountMakerCarlos = null;
     public static AdminPortal adminPortal = null;
     public static LoginPage loginPage = null;
-    public static Messaging messaging = null;
-    public static UnitList unitList = null;
+    public static MessagingCarlos messagingCarlos = null;
+    public static UnitListCarlos unitListCarlos = null;
 
     @BeforeClass
     public static void setup() {
         File file = new File("src/test/resources/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         driver = new ChromeDriver();
-        accountMaker = new AccountMaker(driver);
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        accountMakerCarlos = new AccountMakerCarlos(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
-        messaging = new Messaging(driver);
-        unitList = new UnitList(driver);
+        messagingCarlos = new MessagingCarlos(driver);
+        unitListCarlos = new UnitListCarlos(driver);
     }
 
     @AfterClass
-    public static void teardown(){
+    public static void teardown() {
         driver.quit();
     }
-
-
 }
