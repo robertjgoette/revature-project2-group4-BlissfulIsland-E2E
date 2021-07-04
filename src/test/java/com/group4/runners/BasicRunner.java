@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
@@ -36,6 +37,7 @@ public class BasicRunner {
 
     @AfterClass
     public static void teardown(){
+        BasicRunner.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         driver.quit();
     }
 
