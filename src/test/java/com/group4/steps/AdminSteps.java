@@ -17,14 +17,14 @@ public class AdminSteps {
 
     @Given("The Admin has logged in and is on the admin portal")
     public void the_Admin_has_logged_in_and_is_on_the_admin_portal() {
-        String loginPagePath = "C:\\Users\\moham\\PycharmProjects\\Project2FE\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        //String loginPagePath = "C:\\Users\\moham\\PycharmProjects\\Project2FE\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
         // element that is on the admin portal page that can be used in the explicit wait
-        //String loginPagePath = "https://2105batch-project2-group4.s3.us-east-2.amazonaws.com/index.html";
+        String loginPagePath = "https://2105batch-project2-group4.s3.us-east-2.amazonaws.com/index.html";
         String elementID = "tenantList";
 
         BasicRunner.driver.get(loginPagePath);
-        BasicRunner.loginPage.email.sendKeys("admin@blissfulisland.com");
-        BasicRunner.loginPage.password.sendKeys("password");
+        BasicRunner.loginPage.email.sendKeys("admin@BlissfulIsland.com");
+        BasicRunner.loginPage.password.sendKeys("admin");
         BasicRunner.loginPage.loginButton.click();
         WebDriverWait wait = new WebDriverWait(BasicRunner.driver, 2);
         BasicRunner.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
