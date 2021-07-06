@@ -14,14 +14,16 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features/ManagerFeatures", glue = "com.group4.steps")
-public class BasicRunner {
+@CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
+public class BasicRunnerM {
+
     public static WebDriver driver = null;
-    public static AccountMakerCarlos accountMakerCarlos = null;
+
+    public static AccountMakerM accountMaker = null;
     public static AdminPortal adminPortal = null;
     public static LoginPage loginPage = null;
-    public static MessagingCarlos messagingCarlos = null;
-    public static UnitListCarlos unitListCarlos = null;
+    public static MessagingM messaging = null;
+    public static UnitList unitList = null;
 
     @BeforeClass
     public static void setup() {
@@ -30,16 +32,18 @@ public class BasicRunner {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--allow-running-insecure-content");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        accountMakerCarlos = new AccountMakerCarlos(driver);
+        accountMaker = new AccountMakerM(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
-        messagingCarlos = new MessagingCarlos(driver);
-        unitListCarlos = new UnitListCarlos(driver);
+        messaging = new MessagingM(driver);
+        unitList = new UnitList(driver);
     }
 
     @AfterClass
-    public static void teardown() {
+    public static void teardown(){
+        BasicRunnerM.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         driver.quit();
     }
+
+
 }

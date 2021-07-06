@@ -1,6 +1,6 @@
 package com.group4.steps;
 
-import com.group4.runners.BasicRunner;
+import com.group4.runners.BasicRunnerM;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,17 +15,18 @@ public class TenantSteps {
 
     @Given("The Tenant has logged in and is on the Messaging page")
     public void the_Tenant_has_logged_in_and_is_on_the_Messaging_page() {
-        String loginPagePath = "C:\\Users\\bosto\\Documents\\GitHub\\revature-project2-group4-BlissfulIsland-frontend\\BlissfulIslandFrontend\\index.html";
+        String loginPagePath = "https://2105batch-project2-group4.s3.us-east-2.amazonaws.com/index.html";
         // element that is on the messaging page that can be used in the explicit wait
         String elementID = "recentMessage";
 
-        BasicRunner.driver.get(loginPagePath);
-        BasicRunner.loginPage.email.sendKeys("tenant@gmail.com");
-        BasicRunner.loginPage.password.sendKeys("password");
-        BasicRunner.loginPage.loginButton.click();
-        WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
+        BasicRunnerM.driver.get(loginPagePath);
+        BasicRunnerM.loginPage.email.sendKeys("tenant@gmail.com");
+        BasicRunnerM.loginPage.password.sendKeys("password");
+        BasicRunnerM.loginPage.loginButton.click();
+        WebDriverWait wait = new WebDriverWait(BasicRunnerM.driver,2);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
         Assert.assertEquals(BasicRunner.driver.getTitle(), "Home Page");
+
     }
 
     @When("A table is shown on the page with a list of recent messages")

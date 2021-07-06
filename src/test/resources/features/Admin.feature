@@ -1,23 +1,23 @@
 Feature: Admins can use the system
   Scenario: Admins can create manager accounts
     Given The Admin has logged in and is on the admin portal
-    Then The Admin sees the accounts table
-    When The Admin clicks on the Make Manager button
-    Then The Admin is taken to the Tenant Account Management page
-    When The Admin clicks on the Create Manager Account button
-    Then The Admin gets a pop-up with the form for creating manager accounts
-    Then The Admin inputs the manager's first and last name
-    Then The Admin inputs the manager's email address
-    Then The Admin inputs the manager's unit number
-    Then The Admin inputs a password for the manager's account
-    When The Admin clicks the Submit button
-    Then The Admin gets a pop-up with a success message
-    Then The Admin is taken back to the Tenant Account Management page
+    When The Admin clicks on the Account Maker button
+    Then The Admin should be taken to the Create Account page
+    When The Admin inputs the manager's first into the First Name field
+    When The Admin inputs the manager's last name into the Last Name field
+    When The Admin inputs the manager's email address into the Email field
+    When The Admin inputs the password for the manager's account into the Password field
+    When The Admin inputs the manager's account number into the Account Type field
+    When The Admin selects the manager's unit number from Unit ID dropdown menu
+    When The Admin clicks on the Submit button
+    Then The Admin should get a pop-up with a success message
+    Then The Admin should be taken back to the admin portal
 
   Scenario: Admins can upgrade tenant accounts to be manager accounts
     Given The Admin has logged in and is on the admin portal
-    Then The Admin sees the accounts table
-    When The Admin clicks on the Promote to Manager button
+    When The Admin clicks on the Tenant List plus sign
+    Then The Admin should see the accounts table
+    When The Admin clicks on the Make Manager button
     Then A pop up asking for confirmation appears
-    When The Admin clicks the Yes button
-    Then The connected account is promoted to a manager account
+    When The Admin clicks on the pop up Make Manager button
+    Then The connected account should be promoted to a manager account
