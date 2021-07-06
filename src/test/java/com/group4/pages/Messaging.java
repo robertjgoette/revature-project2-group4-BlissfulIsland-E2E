@@ -8,14 +8,29 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MessagingCarlos {
+public class Messaging {
 
     private WebDriver driver;
 
-    public MessagingCarlos(WebDriver driver) {
+    public Messaging(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
+
+    @FindBy(id = "recentMessage")
+    public WebElement recentMessages;
+
+    @FindBy(id = "oldPlus")
+    public WebElement plusButton;
+
+    @FindBy(id = "sendMessageButton")
+    public WebElement sendMessageButton;
+
+    @FindBy(id = "typeOfIssue")
+    public WebElement typeSelect;
+
+    @FindBy(id = "messageSubmit")
+    public WebElement messageSubmit;
 
     @FindBy(id = "accountMakerButton")
     public WebElement accountMakerButton;
@@ -57,4 +72,8 @@ public class MessagingCarlos {
 
     @FindBy(id = "close")
     public WebElement closeBtn;
+
+    @FindBy(id="accountMaker")
+    public WebElement accountMaker;
+
 }

@@ -14,14 +14,14 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features/ManagerFeatures", glue = "com.group4.steps")
+@CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
 public class BasicRunner {
     public static WebDriver driver = null;
-    public static AccountMakerCarlos accountMakerCarlos = null;
+    public static AccountMaker accountMaker = null;
     public static AdminPortal adminPortal = null;
     public static LoginPage loginPage = null;
-    public static MessagingCarlos messagingCarlos = null;
-    public static UnitListCarlos unitListCarlos = null;
+    public static Messaging messaging = null;
+    public static UnitList unitList = null;
 
     @BeforeClass
     public static void setup() {
@@ -31,11 +31,11 @@ public class BasicRunner {
         options.addArguments("--allow-running-insecure-content");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        accountMakerCarlos = new AccountMakerCarlos(driver);
+        accountMaker = new AccountMaker(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
-        messagingCarlos = new MessagingCarlos(driver);
-        unitListCarlos = new UnitListCarlos(driver);
+        messaging = new Messaging(driver);
+        unitList = new UnitList(driver);
     }
 
     @AfterClass

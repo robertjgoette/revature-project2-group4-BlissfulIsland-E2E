@@ -11,11 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class UnitListCarlos {
+public class UnitList {
 
     private WebDriver driver;
 
-    public UnitListCarlos(WebDriver driver) {
+    public UnitList(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
