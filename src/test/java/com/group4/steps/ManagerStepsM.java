@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ManagerSteps {
+public class ManagerStepsM {
 
     @Given("The Manager has logged in and is on the Messaging page")
     public void the_Manager_has_logged_in_and_is_on_the_Messaging_page() {
