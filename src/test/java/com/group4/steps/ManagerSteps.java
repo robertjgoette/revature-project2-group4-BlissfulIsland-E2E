@@ -15,12 +15,12 @@ import java.util.concurrent.TimeUnit;
 public class ManagerSteps {
     @Given("The Manager has logged in and is on the Messaging page")
     public void the_Manager_has_logged_in_and_is_on_the_Messaging_page() {
-        String loginPagePath = "file:///C:/Users/cahe1/OneDrive/Documents/revature_training/Projects/revature-project2-group4-BlissfulIsland-frontend/BlissfulIslandFrontend/index.html";
+        String loginPagePath = "https://2105batch-project2-group4.s3.us-east-2.amazonaws.com/index.html";
         // element that is on the messaging page that can be used in the explicit wait
         String elementID = "sampleid";
 
         BasicRunner.driver.get(loginPagePath);
-        BasicRunner.loginPage.email.sendKeys("manager@blissfulisland.com");
+        BasicRunner.loginPage.email.sendKeys("manager@BlissfulIsland.com");
         BasicRunner.loginPage.password.sendKeys("password");
         BasicRunner.loginPage.loginButton.click();
         WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
@@ -120,10 +120,11 @@ public class ManagerSteps {
         TimeUnit.SECONDS.sleep(2);
         if(int1 == 2){
            WebElement col =  BasicRunner.unitListCarlos.normalLastRowCol1;
-           Assert.assertTrue(col.getAttribute("innerHTML").contains("306"));
+           Assert.assertTrue(col.getAttribute("innerHTML").contains("210"));
         } else if (int1 == 3) {
             WebElement col =  BasicRunner.unitListCarlos.deluxeLastRowCol1;
-            Assert.assertTrue(col.getAttribute("innerHTML").contains("310"));
+            System.out.println(col.getAttribute("innerHTML"));
+            Assert.assertTrue(col.getAttribute("innerHTML").contains("305"));
         }
     }
 
