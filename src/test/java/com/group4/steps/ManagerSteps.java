@@ -13,7 +13,7 @@ public class ManagerSteps {
 
     @Given("The Manager has logged in and is on the Messaging page")
     public void the_Manager_has_logged_in_and_is_on_the_Messaging_page() {
-        String loginPagePath = "";
+        String loginPagePath = "https://2105batch-project2-group4.s3.us-east-2.amazonaws.com/index.html";
         // element that is on the messaging page that can be used in the explicit wait
         String elementID = "sampleid";
 

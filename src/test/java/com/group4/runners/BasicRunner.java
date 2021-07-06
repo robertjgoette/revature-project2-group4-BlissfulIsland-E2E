@@ -8,6 +8,8 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -27,7 +29,9 @@ public class BasicRunner {
     public static void setup() {
         File file = new File("src/test/resources/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--allow-running-insecure-content");
+        driver = new ChromeDriver(options);
         accountMaker = new AccountMaker(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
