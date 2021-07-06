@@ -1,6 +1,6 @@
 package com.group4.steps;
 
-import com.group4.runners.BasicRunner;
+import com.group4.runners.BasicRunnerM;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,13 +17,13 @@ public class TenantSteps {
         // element that is on the messaging page that can be used in the explicit wait
         String elementID = "sampleid";
 
-        BasicRunner.driver.get(loginPagePath);
-        BasicRunner.loginPage.email.sendKeys("tenant@gmail.com");
-        BasicRunner.loginPage.password.sendKeys("password");
-        BasicRunner.loginPage.loginButton.click();
-        WebDriverWait wait = new WebDriverWait(BasicRunner.driver,2);
+        BasicRunnerM.driver.get(loginPagePath);
+        BasicRunnerM.loginPage.email.sendKeys("tenant@gmail.com");
+        BasicRunnerM.loginPage.password.sendKeys("password");
+        BasicRunnerM.loginPage.loginButton.click();
+        WebDriverWait wait = new WebDriverWait(BasicRunnerM.driver,2);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
-        Assert.assertEquals(BasicRunner.driver.getTitle(), "Messaging");
+        Assert.assertEquals(BasicRunnerM.driver.getTitle(), "Messaging");
     }
 
     @When("The Tenant clicks on the Conversations button")

@@ -15,14 +15,14 @@ import java.util.concurrent.TimeUnit;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "classpath:features", glue = "com.group4.steps")
-public class BasicRunner {
+public class BasicRunnerM {
 
     public static WebDriver driver = null;
 
-    public static AccountMaker accountMaker = null;
+    public static AccountMakerM accountMaker = null;
     public static AdminPortal adminPortal = null;
     public static LoginPage loginPage = null;
-    public static Messaging messaging = null;
+    public static MessagingM messaging = null;
     public static UnitList unitList = null;
 
     @BeforeClass
@@ -32,16 +32,16 @@ public class BasicRunner {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--allow-running-insecure-content");
         driver = new ChromeDriver(options);
-        accountMaker = new AccountMaker(driver);
+        accountMaker = new AccountMakerM(driver);
         adminPortal = new AdminPortal(driver);
         loginPage = new LoginPage(driver);
-        messaging = new Messaging(driver);
+        messaging = new MessagingM(driver);
         unitList = new UnitList(driver);
     }
 
     @AfterClass
     public static void teardown(){
-        BasicRunner.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+        BasicRunnerM.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         driver.quit();
     }
 
