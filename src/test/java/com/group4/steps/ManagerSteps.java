@@ -108,7 +108,7 @@ public class ManagerSteps {
 
     @When("The manager clicks on the plus sign of Type {int} apartments")
     public void the_manager_clicks_on_the_plus_sign_of_Type_apartments(Integer int1) {
-        if (int1 == 2) {
+         if (int1 == 2) {
             BasicRunner.unitListCarlos.normalPlus.click();
         }else if(int1 == 3){
             BasicRunner.unitListCarlos.deluxPlus.click();
@@ -119,8 +119,8 @@ public class ManagerSteps {
     public void the_manager_should_see_the_list_of_Type_apartments(Integer int1) throws InterruptedException {
         TimeUnit.SECONDS.sleep(2);
         if(int1 == 2){
-            WebElement col =  BasicRunner.unitListCarlos.normalLastRowCol1;
-            Assert.assertTrue(col.getAttribute("innerHTML").contains("210"));
+           WebElement col =  BasicRunner.unitListCarlos.normalLastRowCol1;
+           Assert.assertTrue(col.getAttribute("innerHTML").contains("210"));
         } else if (int1 == 3) {
             WebElement col =  BasicRunner.unitListCarlos.deluxeLastRowCol1;
             System.out.println(col.getAttribute("innerHTML"));
@@ -148,8 +148,8 @@ public class ManagerSteps {
 
     @When("The manager clicks on the plus sign")
     public void the_manager_clicks_on_the_plus_sign() throws InterruptedException{
-        TimeUnit.SECONDS.sleep(2);
-        BasicRunner.messagingCarlos.plusBtn.click();
+            TimeUnit.SECONDS.sleep(2);
+            BasicRunner.messagingCarlos.plusBtn.click();
     }
 
     @Then("The manager should see a list of past messages")
