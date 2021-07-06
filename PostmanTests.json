@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e86ecfa5-5051-4584-8a17-2af85e00dc8e",
+		"_postman_id": "a4232806-0470-4bca-a0c5-ff75ec5c13af",
 		"name": "Project2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"tenant@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+					"raw": "{\r\n    \"email\":\"robert@email.com\",\r\n    \"password\":\"password\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -200,7 +200,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://18.117.185.229:7000/accounts/40",
+					"raw": "http://18.117.185.229:7000/accounts/24",
 					"protocol": "http",
 					"host": [
 						"18",
@@ -211,7 +211,7 @@
 					"port": "7000",
 					"path": [
 						"accounts",
-						"40"
+						"24"
 					]
 				}
 			},
@@ -380,7 +380,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"accountId\":12,\r\n    \"email\":\"postman@request.com\",\r\n    \"password\":\"password\",\r\n    \"firstName\":\"Post\",\r\n    \"lastName\":\"Man\",\r\n    \"unitID\":1,\r\n    \"accountType\":0\r\n}",
+					"raw": "{\r\n    \"accountId\":15,\r\n    \"email\":\"postman@request.com\",\r\n    \"password\":\"password\",\r\n    \"firstName\":\"Post\",\r\n    \"lastName\":\"Man\",\r\n    \"unitID\":1,\r\n    \"accountType\":0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -433,7 +433,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://18.117.185.229:7000/accounts/107",
+					"raw": "http://18.117.185.229:7000/accounts/33",
 					"protocol": "http",
 					"host": [
 						"18",
@@ -444,7 +444,7 @@
 					"port": "7000",
 					"path": [
 						"accounts",
-						"107"
+						"33"
 					]
 				}
 			},
@@ -515,7 +515,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"senderID\":\"84\",\r\n    \"receiverID\":\"85\",\r\n    \"messageBody\":\"Hi\",\r\n    \"timeSent\":\"7\",\r\n    \"messageType\":\"0\"\r\n}",
+					"raw": "{\r\n    \"senderID\":\"4\",\r\n    \"receiverID\":\"2\",\r\n    \"messageBody\":\"Hi\",\r\n    \"timeSent\":\"7\",\r\n    \"messageType\":\"0\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -637,7 +637,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://18.117.185.229:7000/messages/44",
+					"raw": "http://18.117.185.229:7000/messages/18",
 					"protocol": "http",
 					"host": [
 						"18",
@@ -648,7 +648,7 @@
 					"port": "7000",
 					"path": [
 						"messages",
-						"44"
+						"18"
 					]
 				}
 			},
